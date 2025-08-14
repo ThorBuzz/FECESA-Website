@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FECESA | Faculty of Electrical and Computer Engineering</title>
+    <meta name="description" content="Official website of the Faculty of Electrical and Computer Engineering Students' Association">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- Inside templates/index.html -->
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+<img src="{{ url_for('static', filename='images/logo.png') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark mt-2 bg-dark rounded-pill px-3 shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/FECESA-LOGO-PNG.png" alt="FECESA Logo" width="40" height="40" class="me-2">
+                <div>
+                    <span class="fw-bold">FECESA</span>
+                    <small class="d-block text-muted" style="font-size: 0.7rem; line-height: 1">Faculty of ECE</small>
+                </div>
+            </a>
+            
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-newspaper me-1"></i> News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-blog me-1"></i> Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-store me-1"></i> Student Mart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-book me-1"></i> Resources</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-graduation-cap me-1"></i> Programs
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><h6 class="dropdown-header">Undergraduate</h6></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-bolt me-2"></i> Electrical Engineering</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-laptop-code me-2"></i> Computer Engineering</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-heartbeat me-2"></i> Biomedical Engineering</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-satellite-dish me-2"></i> Telecommunications</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Postgraduate</h6></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-microchip me-2"></i> Embedded Systems</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-brain me-2"></i> AI & Robotics</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- Right-aligned items -->
+                <div class="d-flex">
+                    <a href="#" class="btn btn-sm btn-outline-light me-2"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
+                    <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-user-plus me-1"></i> Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold mb-4">Shaping the Future of <span class="text-primary">Engineering</span></h1>
+                    <p class="lead mb-4">Join the Faculty of Electrical and Computer Engineering at the forefront of technological innovation and academic excellence.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-primary btn-lg px-4"><i class="fas fa-graduation-cap me-2"></i> Apply Now</a>
+                        <a href="#" class="btn btn-outline-light btn-lg px-4"><i class="fas fa-play-circle me-2"></i> Watch Video</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Engineering Students" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Programs Section -->
+    <section class="programs-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our <span class="text-primary">Academic Programs</span></h2>
+                <p class="lead text-muted">Comprehensive engineering education for the digital age</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card program-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper bg-primary bg-opacity-10 text-primary mb-3">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h5 class="card-title">Electrical Engineering</h5>
+                            <p class="card-text text-muted">Master power systems, electronics, and electrical machines with hands-on training.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card program-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper bg-success bg-opacity-10 text-success mb-3">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h5 class="card-title">Computer Engineering</h5>
+                            <p class="card-text text-muted">Bridge hardware and software with cutting-edge computing technologies.</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card program-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper bg-info bg-opacity-10 text-info mb-3">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h5 class="card-title">Biomedical Engineering</h5>
+                            <p class="card-text text-muted">Combine engineering principles with medical and biological sciences.</p>
+                            <a href="#" class="btn btn-sm btn-outline-info">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card program-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper bg-warning bg-opacity-10 text-warning mb-3">
+                                <i class="fas fa-satellite-dish"></i>
+                            </div>
+                            <h5 class="card-title">Telecommunications</h5>
+                            <p class="card-text text-muted">Design and optimize communication networks and systems.</p>
+                            <a href="#" class="btn btn-sm btn-outline-warning">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary px-4"><i class="fas fa-list me-2"></i> View All Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section class="news-section py-5 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <div>
+                    <h2 class="fw-bold">Latest <span class="text-primary">News</span> & <span class="text-primary">Events</span></h2>
+                    <p class="text-muted mb-0">Stay updated with faculty announcements and activities</p>
+                </div>
+                <a href="#" class="btn btn-outline-primary">View All <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card news-card border-0 shadow-sm h-100">
+                        <div class="card-img-top position-relative">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" class="img-fluid" alt="News Image">
+                            <span class="badge bg-primary position-absolute top-0 end-0 m-3">Event</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="text-muted small me-3"><i class="far fa-calendar-alt me-1"></i> Oct 15, 2023</span>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> 3 min read</span>
+                            </div>
+                            <h5 class="card-title">Annual Engineering Symposium 2023</h5>
+                            <p class="card-text text-muted">Join us for the biggest gathering of engineering minds featuring keynote speakers from leading tech companies.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card news-card border-0 shadow-sm h-100">
+                        <div class="card-img-top position-relative">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" class="img-fluid" alt="News Image">
+                            <span class="badge bg-success position-absolute top-0 end-0 m-3">Achievement</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="text-muted small me-3"><i class="far fa-calendar-alt me-1"></i> Oct 10, 2023</span>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> 4 min read</span>
+                            </div>
+                            <h5 class="card-title">FECESA Team Wins National Robotics Competition</h5>
+                            <p class="card-text text-muted">Our student team secured first place in the national robotics championship with their innovative autonomous system.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-sm btn-outline-success">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card news-card border-0 shadow-sm h-100">
+                        <div class="card-img-top position-relative">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid" alt="News Image">
+                            <span class="badge bg-info position-absolute top-0 end-0 m-3">Announcement</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="text-muted small me-3"><i class="far fa-calendar-alt me-1"></i> Oct 5, 2023</span>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> 2 min read</span>
+                            </div>
+                            <h5 class="card-title">New AI Research Lab Inaugurated</h5>
+                            <p class="card-text text-muted">The faculty has established a state-of-the-art AI research facility with funding from industry partners.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-sm btn-outline-info">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Resources Section -->
+    <section class="resources-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Student <span class="text-primary">Resources</span></h2>
+                <p class="lead text-muted">Everything you need for academic success</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card resource-card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper-lg bg-primary bg-opacity-10 text-primary mb-3 mx-auto">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h5 class="card-title">Course Materials</h5>
+                            <p class="card-text text-muted small">Lecture notes, slides, and reading lists for all courses</p>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card resource-card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper-lg bg-success bg-opacity-10 text-success mb-3 mx-auto">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h5 class="card-title">Past Exams</h5>
+                            <p class="card-text text-muted small">Previous years' exam papers with solutions</p>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card resource-card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper-lg bg-info bg-opacity-10 text-info mb-3 mx-auto">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h5 class="card-title">Software Tools</h5>
+                            <p class="card-text text-muted small">Free downloads and licenses for engineering software</p>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card resource-card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper-lg bg-warning bg-opacity-10 text-warning mb-3 mx-auto">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h5 class="card-title">Career Center</h5>
+                            <p class="card-text text-muted small">Internship and job opportunities for students</p>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 bg-dark text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">What Our <span class="text-primary">Students</span> Say</h2>
+                <p class="lead text-muted">Hear from our engineering community</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-card text-center p-4 p-lg-5">
+                                    <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Student">
+                                    <div class="rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="lead mb-4">"The hands-on labs and industry partnerships at FECESA gave me the practical skills I needed to land my dream job at a leading tech company right after graduation."</p>
+                                    <h5 class="mb-1">Sarah Johnson</h5>
+                                    <p class="text-muted mb-0">Computer Engineering, Class of 2022</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card text-center p-4 p-lg-5">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Student">
+                                    <div class="rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="lead mb-4">"The faculty's research opportunities allowed me to work on cutting-edge AI projects that became the foundation for my startup. The mentorship here is unparalleled."</p>
+                                    <h5 class="mb-1">Michael Chen</h5>
+                                    <p class="text-muted mb-0">Electrical Engineering, Class of 2021</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card text-center p-4 p-lg-5">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Student">
+                                    <div class="rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                    <p class="lead mb-4">"As an international student, I found a welcoming community and excellent support services. The curriculum's balance of theory and practice prepared me perfectly for my career."</p>
+                                    <h5 class="mb-1">Amina Diallo</h5>
+                                    <p class="text-muted mb-0">Telecommunications, Class of 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-3">Ready to Start Your Engineering Journey?</h2>
+                    <p class="lead mb-lg-0">Join the next generation of innovators and problem solvers at FECESA.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="#" class="btn btn-light btn-lg px-4 me-2"><i class="fas fa-user-graduate me-2"></i> Apply Now</a>
+                    <a href="#" class="btn btn-outline-light btn-lg px-4"><i class="fas fa-info-circle me-2"></i> Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand d-flex align-items-center mb-3">
+                        <img src="images/FECESA-LOGO-PNG.png" alt="FECESA Logo" width="40" height="40" class="me-2">
+                        <h4 class="mb-0">FECESA</h4>
+                    </div>
+                    <p>Faculty of Electrical and Computer Engineering Students' Association - Empowering future engineers through education, innovation, and community.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Programs</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Admissions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Research</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5 class="mb-3">Academic</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Course Catalog</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Academic Calendar</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Student Handbook</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Lab Schedules</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Faculty Directory</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Library Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> 123 Engineering Blvd, Tech City</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i> info@fecesa.edu</li>
+                        <li class="mb-2"><i class="fas fa-clock me-2 text-primary"></i> Mon-Fri: 8:00 AM - 5:00 PM</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-sm btn-outline-light me-2"><i class="fas fa-directions me-1"></i> Campus Map</a>
+                        <a href="#" class="btn btn-sm btn-outline-light"><i class="fas fa-headset me-1"></i> Support</a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-secondary">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 small">&copy; 2023 FECESA. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0 small">
+                        <li class="list-inline-item"><a href="#" class="text-white-50">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white-50">Terms of Service</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white-50">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary btn-back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

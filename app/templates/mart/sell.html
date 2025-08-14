@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0"><i class="fas fa-tag me-2"></i> Sell Your Item</h3>
+                </div>
+                <div class="card-body p-4 p-md-5">
+                    <form method="POST" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+
+                        <div class="mb-4">
+                            <h5 class="mb-3">1. Product Details</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    {{ form.title.label(class="form-label") }}
+                                    {{ form.title(class="form-control") }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.category.label(class="form-label") }}
+                                    {{ form.category(class="form-select") }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.price.label(class="form-label") }}
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        {{ form.price(class="form-control") }}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.condition.label(class="form-label") }}
+                                    {{ form.condition(class="form-select") }}
+                                </div>
+                                <div class="col-12">
+                                    {{ form.description.label(class="form-label") }}
+                                    {{ form.description(class="form-control", rows=4) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="mb-3">2. Product Images</h5>
+                            <div class="border rounded p-3 text-center">
+                                <div id="image-preview" class="mb-3"></div>
+                                {{ form.images(class="form-control", multiple="") }}
+                                <small class="text-muted">Upload up to 5 images (first image will be the cover)</small>
+                            </div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg py-3">
+                                <i class="fas fa-check-circle me-2"></i> Publish Listing
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Modern Blog Platform</title>
+    <meta name="description" content="A cutting-edge blog platform featuring the latest in web technology">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <link href="{{ url_for('static', filename='css/blog.css') }}" rel="stylesheet"> 
+
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Header with Glass Morphism -->
+    <header class="glass">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">N</span>
+                    <h1>Nexus</h1>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="nav-link active">Home</a></li>
+                        <li><a href="#" class="nav-link">Articles</a></li>
+                        <li><a href="#" class="nav-link">Topics</a></li>
+                        <li><a href="#" class="nav-link">About</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="btn primary">Subscribe</button>
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Where Ideas <span class="text-gradient">Converge</span></h2>
+                <p class="hero-subtitle">Exploring the intersection of technology, design, and innovation</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search articles...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Featured Post -->
+        <section class="featured-post glass">
+            <div class="featured-content">
+                <span class="badge">Featured</span>
+                <h2>The Future of AI in Creative Industries</h2>
+                <p class="post-excerpt">How generative AI is transforming design, content creation, and artistic expression in unprecedented ways.</p>
+                <div class="post-meta">
+                    <div class="author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author" class="author-avatar">
+                        <span>Sarah Chen</span>
+                    </div>
+                    <span>June 15, 2023 · 8 min read</span>
+                </div>
+                <a href="#" class="btn outline">Read Article</a>
+            </div>
+            <div class="featured-image">
+                <img src="https://images.unsplash.com/photo-1677442135136-760c813a743d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="AI Creative">
+                <div class="image-overlay"></div>
+            </div>
+        </section>
+
+        <!-- Articles Grid -->
+        <section class="articles-grid">
+            <h3 class="section-title">Latest Articles</h3>
+            
+            <div class="grid-container">
+                <!-- Articles will be loaded here dynamically -->
+            </div>
+            
+            <div class="load-more">
+                <button class="btn secondary" id="load-more">Load More</button>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <section class="newsletter glass">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest articles and insights delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn primary">Subscribe</button>
+                </form>
+            </div>
+            <div class="newsletter-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Newsletter">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">N</span>
+                        <h2>Nexus</h2>
+                    </div>
+                    <p>Cutting-edge insights at the intersection of technology and creativity.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#">All Articles</a></li>
+                            <li><a href="#">Popular Topics</a></li>
+                            <li><a href="#">Authors</a></li>
+                            <li><a href="#">Podcasts</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Licenses</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Nexus Blog. All rights reserved.</p>
+                <div class="footer-actions">
+                    <button id="back-to-top" class="icon-btn" aria-label="Back to top">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
