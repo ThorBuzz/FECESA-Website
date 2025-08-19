@@ -39,3 +39,6 @@ def sell_product():
     return render_template('mart/sell.html', form=form)
 
 # Other mart routes...
+from app import photos
+# Example in a route:
+# filename = photos.save(request.files['photo'])
